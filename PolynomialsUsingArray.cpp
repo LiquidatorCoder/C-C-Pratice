@@ -65,21 +65,20 @@ void sub_poly(int p1[], int m, int p2[], int n)
 
 void mul_poly(int p1[], int m, int p2[], int n)
 {
-    int l=m+n-1;
-    int c[l];
-    for(int i=0;i<=l;i++)
+    int *c = new int[m+n-1];
+    for(int i=0;i<=(m+n-1);i++)
     {
         c[i]=0;
     }
-    for (int i=0; i<m; i++)
+    for (int i=0; i<=m; i++)
    {
-     for (int j=0; j<n; j++)
+     for (int j=0; j<=n; j++)
      {
-         c[i+j] = c[i+j] p1[i]*p2[j];
+         c[i+j] += p1[i]*p2[j];
      }
    }
     cout<<"\nMultiplication of both the polynomials : "<<endl;
-    cout_poly(c,l);
+    cout_poly(c,m+n-1);
 }
 
 int main()
