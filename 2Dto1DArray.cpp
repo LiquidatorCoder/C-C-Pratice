@@ -20,7 +20,7 @@ int main()
     }
 
     cout<<endl;
-    cout<<"The Row-major mapped 2D Array you entered : "<<endl;
+    cout<<"The 2D Array you entered : "<<endl;
     for(int i=0; i<n; i++)
     {
         cout<<"[ ";
@@ -40,40 +40,29 @@ int main()
             int temp=0;
             temp=tda[i][j];
             oda[j+(i*m)]=temp;
-            cout<<oda[j+(i*m)]<<" ";
         }
     }
-
-    cout<<endl;
-    cout<<endl;
-
-    int tswap=0;
-    tswap=m;
-    m=n;
-    n=tswap;
-
-    cout<<"The Column-major mapped 2D Array you entered : "<<endl;
-    for(int i=0; i<n; i++)
+    for(int i=0; i<n*m; i++)
     {
-        cout<<"[ ";
-        for(int j=0; j<m; j++)
-        {
-            cout<<tda[j][i]<<" ";
-        }
-        cout<<"]"<<endl;
+        cout<<oda[i]<<" ";
     }
 
     cout<<endl;
+    cout<<endl;
+
     cout<<"Final 1D Array for Column-Major mapped 2D array: "<<endl;
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<m; j++)
         {
             int temp=0;
-            temp=tda[j][i];
+            temp=tda[i][j];
             oda[i+(j*n)]=temp;
-            cout<<oda[i+(j*n)]<<" ";
         }
+    }
+    for(int i=0; i<n*m; i++)
+    {
+        cout<<oda[i]<<" ";
     }
     cout<<endl;
 }
