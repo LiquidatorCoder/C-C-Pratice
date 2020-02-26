@@ -75,6 +75,10 @@ int main()
         {
             cout<<s.disp()<<" is at the top of the stack\n";
         }
+        else if(c=='e')
+        {
+            cout<<s.isEmpty()<<"\n";
+        }
     }
     return 0;
 }
