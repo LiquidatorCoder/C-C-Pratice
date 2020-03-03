@@ -93,9 +93,9 @@ int n = 15;							//total node count and initial node
 int u = 0;
 char face = 'w';					//direction variables which include directions w,n,e,s
 char fdir = 'n';
-int house_config[5] = {1,1,0,0,1};
-int house_req[5] = {2,2,2,1,2};
-int which_material[10] = {1,3,2,4,10,12,0,11,7,5};
+int house_config[5] = {0,1,1,0,0};
+int house_req[5] = {2,2,2,2,2};
+int which_material[10] = {9,11,5,4,12,7,1,3,2,8};
 //int which_material[10] = {-,-,-,-,-,0,-,-,-,-};
 int dis[15];
 int pre[15];
